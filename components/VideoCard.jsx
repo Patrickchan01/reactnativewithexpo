@@ -37,18 +37,18 @@ const VideoCard = ({ video: { title, thumbnail, video, creator: { username, avat
                 <Text className='text-white'>Playing</Text>
             ) : (
                 <TouchableOpacity className='w-full h-60 rounded-xl mt-3 relative justify-center items-center'
-                activeOpacity={0.7}
-                onPress={() => setPlay(true)}
+                    activeOpacity={0.7}
+                    onPress={() => setPlay(true)}
                 >
                     <Image
                         source={{ uri: thumbnail }}
                         className='w-full h-full rounded-xl mt-3'
                         resizeMode='cover'
                     />
-                    <Image 
-                    source={icons.play}
-                    className='w-12 h-12 absolute'
-                    resizeMode='contain'
+                    <Image
+                        source={icons.play}
+                        className='w-12 h-12 absolute'
+                        resizeMode='contain'
                     />
                 </TouchableOpacity>
 
