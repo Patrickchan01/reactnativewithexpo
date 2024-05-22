@@ -12,7 +12,7 @@ import { useGlobalContext } from '../../context/GlobalProvider'
 
 
 const Home = () => {
-  const {user} = useGlobalContext();
+  const { user } = useGlobalContext();
   const { data: posts, refetch } = useAppWrite(getAllPosts);
   const { data: latestPosts } = useAppWrite(getLatestPosts);
   const [refreshing, setRefreshing] = useState(false)
@@ -25,7 +25,6 @@ const Home = () => {
     <SafeAreaView className='bg-primary h-full'>
       <FlatList
         data={posts}
-        // data={[]}
         keyExtractor={(item) => item.$id}
         renderItem={({ item }) => (
           <VideoCard
